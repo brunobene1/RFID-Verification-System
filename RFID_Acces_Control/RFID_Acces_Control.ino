@@ -1,23 +1,23 @@
-/*
- RFID_Acces_Control
- Author : Bruno Benedetti
- Date : 06/10/2021
+/**
+ * \brief RFID Acces Control Program.
+ * 
+ * \author Bruno Benedetti <brunobenedetti45@gmail.com>
+ * 
+ * \version 2.0.0
+ * 
+ * \date 06/10/2021
+ * 
  */
 
-
-#include "ID_12.h"
-
+#include "Main_program.h"
 
 
 void setup()
 {
-  MySetup(); ////Initializes the Serial comunication and the LED pins
+  main_program_setup();
 }
 
-
-
 void loop () 
-{  
-//SerialPrintTagID();       // Show the Tag ID on the Serial Monitor
-TagIDIndentification();     //Verifys if the ID is registered
+{
+  main_program_loop();
 }
