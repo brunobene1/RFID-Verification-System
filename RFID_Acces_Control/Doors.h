@@ -21,4 +21,9 @@ void doors_setup();
  */
 void doors_open(int door_num, int* acces);
 
+/**
+ * \brief Unlock all doors if you want to open from inside
+ */
+void doors_indoor_button();
+
 #endif /* DOORS_H */

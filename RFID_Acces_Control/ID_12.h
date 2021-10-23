@@ -10,6 +10,8 @@
 #include <Arduino.h>
 #include <string.h>
 
+extern int max_num_ids; //max number of ifs that can be registered
+extern int number_of_registered_ids; //number of registered ids
 
 /**
  * \brief Starts the program with some ids already registered
@@ -47,5 +49,6 @@ void id12_add_id(char* id, int id_is_on_the_list);
  *
  */
 void id12_del_id();
+
 
 #endif /* ID_12_H */

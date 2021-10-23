@@ -62,4 +62,14 @@ void serialf_print_registering_msg(int is_id_registerd);
  */
 void serialf_print_del_tag_msg();
 
+/**
+ * \brief Prints on the serial monitor that the doors are beign unlock from inside
+ */
+void serialf_print_indoor_button();
+
+/**
+ * \brief Prints on the serial monitor the timeout mensage
+ */
+void serialf_print_timeout();
+
 #endif /* SERIAL_F_H */

@@ -41,3 +41,12 @@ void doors_open(int door_num, int* acces)
     digitalWrite(LED_DENIED, LOW);
   }
 }
+
+void doors_indoor_button()
+{
+  digitalWrite(DOOR1, HIGH);
+  digitalWrite(DOOR2, HIGH);
+  delay(2500);
+  digitalWrite(DOOR1, LOW);
+  digitalWrite(DOOR2, LOW);
+}

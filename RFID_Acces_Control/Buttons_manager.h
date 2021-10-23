@@ -7,6 +7,7 @@
 #define DOOR2_BUTTON 10
 #define ADD_TAG_BUTTON 13
 #define DEL_TAG_BUTTON A0
+#define INDOOR_BUTTON A2
 
 /**
  * \brief Setup the Button pins with a pull-up resistor.

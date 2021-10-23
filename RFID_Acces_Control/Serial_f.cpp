@@ -1,4 +1,5 @@
 #include "Serial_f.H"
+#include "ID_12.h"
 
 void serialf_setup()
 {
@@ -13,7 +14,7 @@ void serialf_print_tagid(char* id)
 
 void serialf_wait_for_serial ()
 {
-  while(Serial.available() == 0) {} //waits until the serial has something
+  while(Serial.available() ==0){} //waits until the serial has something
 }
 
 void serialf_print_accesgranted()
@@ -59,14 +60,22 @@ void serialf_print_waiting_add_tag()
 
 void serialf_print_registering_msg(int is_id_registerd)
 {
-  if(is_id_registerd ==0)
+  if(number_of_registered_ids < max_num_ids)
   {
-    Serial.print("New id registered!");
-    Serial.println();
+    if(is_id_registerd ==0)
+    {
+      Serial.print("New id registered!");
+      Serial.println();
+    }
+    else
+    {
+      Serial.print("The id is already registered!");
+      Serial.println();
+    }
   }
   else
   {
-    Serial.print("The id is already registered!");
+    Serial.print("Max number of ids registered!");
     Serial.println();
   }
 }
@@ -74,5 +83,18 @@ void serialf_print_registering_msg(int is_id_registerd)
 void serialf_print_del_tag_msg()
 {
   Serial.println("The last tag registered was removed.");
+  Serial.println();
+}
+
+void serialf_print_indoor_button()
+{
+  Serial.println("Someone is trying to get out of the room.");
+  Serial.println("Unlocking the door.");
+  Serial.println();
+}
+
+void serialf_print_timeout()
+{
+  Serial.println("Timeout");
   Serial.println();
 }

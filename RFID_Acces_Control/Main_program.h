@@ -2,10 +2,12 @@
 #define MAIN_PROGRAM_H
 
 #include <Arduino.h>
+#include <Wire.h>
 #include "ID_12.h"
 #include "Serial_f.h"
 #include "Doors.h"
 #include "Buttons_manager.h"
+#include "Lcd_f.h"
 
 /**
  * \brief Has all the setup functions 

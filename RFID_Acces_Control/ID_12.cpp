@@ -1,14 +1,16 @@
 #include "ID_12.h"
 
 char id_list [5][13]; //declaring an char array with 5 elements that are 12 bytes longs each
-int number_of_registered_ids; //number of registered ids
 int id_is_on_the_list; //boolean like variable to check when to stop looping through the array
+int max_num_ids; //max number of ifs that can be registered
+int number_of_registered_ids; //number of registered ids
 
 void id12_setup()
 {
   strcpy(id_list[0], ID_1); //Starts the program with ID_1 registered
   strcpy(id_list[1], ID_2); //Starts the program with ID_2 registered
   number_of_registered_ids = 2;
+  max_num_ids = 5;
 }
 
 void id12_read_id(char* id)
@@ -16,8 +18,8 @@ void id12_read_id(char* id)
   char val; // This variable is used to read the Tag ID
   int counter = 0; //This variable is used in the while loop
   
-  if(Serial.available() > 0) //checks if there's some data on the Serial
-  {
+  //if(Serial.available() > 0) //checks if there's some data on the Serial
+  //{
     while (counter < 12) //loops through each 12 digits of the Tag ID
     {
       val = Serial.read();
@@ -27,9 +29,14 @@ void id12_read_id(char* id)
           counter++;
       }
     }
-    
+  //}
+  while(Serial.available() >0)
+  {
+    val = Serial.read();
+    Serial.println("Lendo ainda");
   }
 }
+
 
 void id12_check_id(char* id, int* id_is_on_the_list)
 {
@@ -47,10 +54,13 @@ void id12_check_id(char* id, int* id_is_on_the_list)
 
 void id12_add_id(char* id, int id_is_on_the_list)
 {
-  if (id_is_on_the_list == 0)
+  if(number_of_registered_ids < max_num_ids)
   {
-    strcpy(id_list[number_of_registered_ids], id);
-    number_of_registered_ids++;
+    if (id_is_on_the_list == 0)
+    {
+      strcpy(id_list[number_of_registered_ids], id);
+      number_of_registered_ids++;
+    }
   }
 }
 
