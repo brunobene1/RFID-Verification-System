@@ -16,10 +16,8 @@ void id12_setup()
 void id12_read_id(char* id)
 {
   char val; // This variable is used to read the Tag ID
-  int counter = 0; //This variable is used in the while loop
-  
-  //if(Serial.available() > 0) //checks if there's some data on the Serial
-  //{
+  int counter = 0; //This variable is used in the id while loop 
+
     while (counter < 12) //loops through each 12 digits of the Tag ID
     {
       val = Serial.read();
@@ -29,12 +27,6 @@ void id12_read_id(char* id)
           counter++;
       }
     }
-  //}
-  while(Serial.available() >0)
-  {
-    val = Serial.read();
-    Serial.println("Lendo ainda");
-  }
 }
 
 
