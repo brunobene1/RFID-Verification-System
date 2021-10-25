@@ -60,4 +60,9 @@ void lcd_f_registering_msg(int is_id_registered);
  */
 void lcd_f_del_tag_msg();
 
+/**
+ * \brief Timeout mensage
+ */
+void lcd_f_timeout_msg();
+
 #endif /* LCD_F_H */

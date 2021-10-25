@@ -23,8 +23,10 @@ void id12_setup();
  * \brief Read the data from the serial and stores on the id char array parameter
  *
  * \param[in] id Gets the id read from the serial
+ * 
+ * \param[out] timeout_counter Necessary for the timeout logic
  */
-void id12_read_id(char* id);
+void id12_read_id(char* id, int& timeout_counter);
 
 /**
  * \brief Checks if the id is registered on the array

@@ -7,7 +7,7 @@ void lcd_f_setup()
 {
  lcd.begin(16, 2); //Initiales a 16x2 matrix
  pinMode(LCD_V0,OUTPUT); 
- analogWrite(LCD_V0,50); //Adjust the lcd contrast
+ analogWrite(LCD_V0,5); //Adjust the lcd contrast
 }
 
 void lcd_f_welcome() 
@@ -87,4 +87,10 @@ void lcd_f_del_tag_msg()
   lcd.print("lista deletado.");
 }
 
+
+void lcd_f_timeout_msg()
+{
+  lcd.setCursor(0,0);  
+  lcd.print("Timeout"); 
+}
 //-------------------------------------------------------------------------------------

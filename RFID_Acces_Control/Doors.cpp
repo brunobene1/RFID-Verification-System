@@ -19,7 +19,7 @@ void doors_open(int door_num, int* acces)
       case 1: // Door1
       //Turn on the Green LED
       digitalWrite(DOOR1, HIGH);
-      delay(2500);
+      delay(3500);
       digitalWrite(DOOR1, LOW);
       *acces = 0;
       break;
@@ -27,7 +27,7 @@ void doors_open(int door_num, int* acces)
       case 2: // Door2
       //Turn on the Green LED
       digitalWrite(DOOR2, HIGH);
-      delay(2500);
+      delay(3500);
       digitalWrite(DOOR2, LOW);
       *acces = 0;
       break;
@@ -37,7 +37,7 @@ void doors_open(int door_num, int* acces)
   {
     //Turn on the Red LED
     digitalWrite(LED_DENIED, HIGH);
-    delay(2500);
+    delay(3500);
     digitalWrite(LED_DENIED, LOW);
   }
 }
@@ -46,7 +46,7 @@ void doors_indoor_button()
 {
   digitalWrite(DOOR1, HIGH);
   digitalWrite(DOOR2, HIGH);
-  delay(2500);
+  delay(3500);
   digitalWrite(DOOR1, LOW);
   digitalWrite(DOOR2, LOW);
 }

@@ -13,12 +13,12 @@ void id12_setup()
   max_num_ids = 5;
 }
 
-void id12_read_id(char* id)
+void id12_read_id(char* id, int& timeout_counter)
 {
   char val; // This variable is used to read the Tag ID
   int counter = 0; //This variable is used in the id while loop 
-
-    while (counter < 12) //loops through each 12 digits of the Tag ID
+  
+    while (counter < 12 && timeout_counter < 1000) //loops through each 12 digits of the Tag ID
     {
       val = Serial.read();
       if (isalnum(val)) //only counts if the digit its a number or a letter
@@ -26,6 +26,9 @@ void id12_read_id(char* id)
           id[counter] = val;
           counter++;
       }
+      timeout_counter++;
+      Serial.println(timeout_counter);
+      delay(10);
     }
 }
 

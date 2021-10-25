@@ -9,6 +9,8 @@
 #include "Buttons_manager.h"
 #include "Lcd_f.h"
 
+#define LED_ON A3 //LED shows if the program is running
+
 /**
  * \brief Has all the setup functions 
  */
