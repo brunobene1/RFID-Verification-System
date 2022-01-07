@@ -8,7 +8,7 @@ The project was made for learning purposes, but it was designed to work on a rea
 # Youtube video  
 https://youtu.be/VXtu8wE-xIc 
 # Wiring Diagram
-![FullWiringDiagram](https://user-images.githubusercontent.com/85142097/148553423-296a7e76-3fd7-4fde-910e-cfb8c00e3da8.png)  
+![Arduino_ID12_LCD_Wiring](https://user-images.githubusercontent.com/85142097/148555870-4129ad36-c0ae-4fb6-a4e7-789eba3ea678.png)  
 # ID-12 pin-out
 ![ID-12 Pinagem](https://user-images.githubusercontent.com/85142097/136481995-7a224311-261f-4f90-9b78-6ac30aea9cd1.png)
 We are going to use the pins :  
