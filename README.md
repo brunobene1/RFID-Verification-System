@@ -5,8 +5,6 @@ There is a button that simulates a button that would be inside of the access are
 The project has a limit of 5 tags to be registered (it can be changed on the code) and a timeout system for more software reliability/security.  
 The project was made for learning purposes, but it was designed to work on a real RFID verification system.  
 ![CaixaPronta](https://user-images.githubusercontent.com/85142097/148553242-84ea566a-6f86-47dc-b9c9-b46d38019f8d.jpg)   
-# Youtube video  
-https://youtu.be/VXtu8wE-xIc 
 # Wiring Diagram
 ![Arduino_ID12_LCD_Wiring](https://user-images.githubusercontent.com/85142097/148555870-4129ad36-c0ae-4fb6-a4e7-789eba3ea678.png)  
 # ID-12 pin-out
